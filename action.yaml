@@ -1,0 +1,15 @@
+name: Print your name
+description: This action will print your name in console and given the date of print
+inputs:
+  name:
+    required: true
+    description: Your name
+    default: World
+outputs:
+  time:
+    description: The time we greeted you
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.name }}
