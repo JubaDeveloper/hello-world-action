@@ -17,7 +17,7 @@ The time we greeted the user.
 ## Example of usage
 
 ```yaml
-    uses: actions/hello-world-docker-action@v2
+    uses: JubaDeveloper/hello-world-action@v1
     with:
         name: "JubaDev"
 ```
