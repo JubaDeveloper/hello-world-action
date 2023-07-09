@@ -1,15 +1,16 @@
-name: Print your name
-description: This action will print your name in console and given the date of print
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-  name:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
     required: true
-    description: Your name
-    default: World
+    default: 'World'
 outputs:
-  time:
-    description: The time we greeted you
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'Dockerfile'
   args:
-    - ${{ inputs.name }}
+    - ${{ inputs.who-to-greet }}
